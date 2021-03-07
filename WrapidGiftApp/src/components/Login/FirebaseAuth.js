@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import fire from './firebase';
-import Login from './Login';
-//import Hero from './Hero';
-import './App.css';
+import fire from '../../firebase';
+import Login from '../../Pages/Login';
+import Hero from '../Hero';
+import '../../Pages/Login.css';
 
-const App = () => {
+const FirebaseAuth = () => {
   const [user,setUser] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -88,7 +88,7 @@ const App = () => {
 
 
 return (
-  <div className = "App">
+  <div className = "FirebaseAuth">
     {user ? (
       <Hero handleLogout = {handleLogout} />
 
@@ -114,4 +114,4 @@ return (
   );
 };
 
-export default App;
+export default FirebaseAuth;
