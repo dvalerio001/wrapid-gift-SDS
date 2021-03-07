@@ -19,6 +19,7 @@ function App() {
 
   return (
   <Router>
+    
     <FirebaseAuth>
     
     <Switch>
@@ -26,7 +27,9 @@ function App() {
       <Route path="/about" exact component={About} />
       <Route path="/login" exact component={Login} />
     </Switch>
+
     </FirebaseAuth>
+
   </Router>
   );
 

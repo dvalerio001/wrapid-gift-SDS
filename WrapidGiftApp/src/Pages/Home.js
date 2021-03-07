@@ -1,16 +1,16 @@
 import React from 'react';
-import Header from "../components/Header";
-import Hero from '../components/Hero';
+import '../Pages/Login.css'
 
+const Home = ({handleLogout}) => {
 
-const Home = () => {
-  return (
-    <>
-    <Header/>
-    <Hero />
-    Home
-    </>
-  );
+    return(
+        <section className = "hero">
+            <nav>
+                <h2>Welcome</h2>
+                <button onClick={handleLogout}>Logout</button>
+            </nav>
+        </section>
+    );
 };
 
 export default Home;

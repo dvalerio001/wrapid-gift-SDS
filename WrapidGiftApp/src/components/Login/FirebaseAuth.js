@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import fire from '../../firebase';
 import Login from '../../Pages/Login';
-import Hero from '../Hero';
+import Home from '../../Pages/Home';
 import '../../Pages/Login.css';
 
 const FirebaseAuth = () => {
@@ -90,7 +90,7 @@ const FirebaseAuth = () => {
 return (
   <div className = "FirebaseAuth">
     {user ? (
-      <Hero handleLogout = {handleLogout} />
+      <Home handleLogout = {handleLogout} />
 
 
     ) : (
