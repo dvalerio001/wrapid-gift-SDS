@@ -1,12 +1,13 @@
 import React from 'react';
 import '../Pages/Login.css'
+import Header from "../components/Header";
 
 const Home = ({handleLogout}) => {
 
     return(
         <section className = "hero">
             <nav>
-                <h2>Welcome</h2>
+              <Header />
                 <button onClick={handleLogout}>Logout</button>
             </nav>
         </section>
