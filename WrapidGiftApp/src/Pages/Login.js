@@ -3,14 +3,13 @@ import Header from "../components/Header";
 import Hero from '../components/Hero';
 
 
-const Home = () => {
+const Login = () => {
   return (
     <>
     <Header/>
     <Hero />
-    Home
     </>
   );
 };
 
-export default Home;
+export default Login;
