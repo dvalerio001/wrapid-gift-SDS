@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "../components/Header";
 import { Link } from 'react-router-dom';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Hero from '../components/Hero';
+
 import './Login.css';
 import Home from './Home'
 
@@ -44,12 +44,12 @@ const Login = (props) => {
                 <div className ="btnContainer">
                     {hasAccount ? (
                         <>
-                        <Link to = "/"> 
+                        <Link to = "/">
                         <button onClick={handleLogin}> Sign In </button> </Link>
                         <p> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
                         </>
 
-                    ) : (   
+                    ) : (
                         <>
                         <Link to = "/">
                         <button onClick={handleSignup}> Sign Up</button> </Link>

@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import fire from '../../firebase';
-import Login from '../../Pages/Login';
-import Home from '../../Pages/Home';
-import '../../Pages/Login.css';
+import fire from '../firebase';
+import Login from '../Pages/Login';
+import Home from '../Pages/Home';
+import '../Pages/Login.css';
 
 const FirebaseAuth = () => {
   const [user,setUser] = useState('');

@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
+import FirebaseAuth from './FirebaseAuth'
 
 const Navbar = styled.nav`
   height: 60px;
@@ -28,13 +29,14 @@ const NavbarLink = styled(Link)`
   padding: 1rem;
 `;
 
-const Header = () => {
+const Header = ({handleLogout}) => {
   return <Navbar>
-  <Logo to="/">Gift</Logo>
+  <Logo to="/">Wrapid Gift</Logo>
   <NavItems>
     <NavbarLink to='/'>Home</NavbarLink>
     <NavbarLink to='/about'>About</NavbarLink>
     <NavbarLink to='/login'>Login</NavbarLink>
+    <NavbarLink to='/'><button onClick={handleLogout}>Logout</button></NavbarLink>
   </NavItems>
   </Navbar>
 };
