@@ -5,7 +5,7 @@ import FirebaseAuth from './FirebaseAuth'
 
 const Navbar = styled.nav`
   height: 60px;
-  background: #000;
+  background: #603BBB;
   padding: 0rem calc((100vw -1300px)/2);
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,7 @@ const NavbarLink = styled(Link)`
   text-decoration: none;
   padding: 1rem;
 `;
+
 
 const Header = ({handleLogout}) => {
   return <Navbar>
