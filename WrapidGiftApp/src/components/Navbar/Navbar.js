@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { MenuItems } from "./MenuItems";
 import './Navbar.css';
-import { Button} from "../Button"
+import { Button} from "../Button";
+import About from "../../Pages/About";
 
 class Navbar extends Component {
   state = { clicked : false }
@@ -29,6 +30,7 @@ class Navbar extends Component {
                 </li>
             )
           })}
+          
 
         </ul>
         <Button>Sign Up</Button>

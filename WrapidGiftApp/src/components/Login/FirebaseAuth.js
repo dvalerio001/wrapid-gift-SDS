@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import fire from './firebase';
 import Login from './Login';
-import Hero from './Hero';
+//import Hero from './Hero';
 import './App.css';
 
 const App = () => {
