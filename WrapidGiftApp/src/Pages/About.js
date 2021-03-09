@@ -2,8 +2,8 @@ import React from 'react';
 import Header from "../components/Header";
 
 import './About.css';
-
-
+import Tyler from './tyler.jpg'
+import DarnellLiz from './liz_nelly.png'
 
 const About = () => {
 
@@ -17,11 +17,12 @@ const About = () => {
       <h2>Meet the Team</h2>
 
 
-      <span>Tyler Spagnolo </span>
+      <h3 id="tyler">Tyler Spagnolo </h3>
+        <img id="tylerImg" src={Tyler}/>
 
-      <span>Elisabeth Ashley </span>
-      <span>Darnell Valerio </span>
-      <p></p>
+      <h4>Elisabeth Ashley and Darnell Valerio  </h4>
+        <img id="darnellLiz" src={DarnellLiz}/>
+
   </section>
   );
 };
