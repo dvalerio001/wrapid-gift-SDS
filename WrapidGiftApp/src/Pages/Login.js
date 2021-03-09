@@ -25,8 +25,8 @@ const Login = (props) => {
     return(
         <section className="login">
             <div className = "loginContainer">
-            <Header/>
-                <label>Username</label>
+            <h1 className="Header-text">Wrapid Gift</h1>
+                <label className="user-label">Username</label>
                 <input type = "text" autoFocus
                 required
                 value = {email}
@@ -46,14 +46,16 @@ const Login = (props) => {
                         <>
                         <Link to = "/">
                         <button onClick={handleLogin}> Sign In </button> </Link>
+                        <link to='/forgot-password'>Forgot Password</link>
                         <p> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
                         </>
 
                     ) : (
                         <>
                         <Link to = "/">
-                        <button onClick={handleSignup}> Sign Up</button> </Link>
-                        <p> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign In</span></p>
+                        <button className="btm-button" onClick={handleSignup}> Sign Up</button> </Link>
+                        
+                        <p className="btm-text"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign In</span></p>
                         </>
 
                     )}

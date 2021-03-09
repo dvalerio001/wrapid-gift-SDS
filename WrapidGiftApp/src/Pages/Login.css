@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,7 +24,6 @@ button {
   background: #e9e9e9;
   display: flex;
 }
-
 
 .login .loginContainer {
   padding: 60px;
@@ -75,7 +73,6 @@ button {
   color: #fff;
 }
 
-
 .login .loginContainer .btnContainer p span {
   color: yellow;
   font-weight: 500;
@@ -122,4 +119,16 @@ button {
   width: 86px;
   padding: 8px 0;
   background: #3a2b58;
+}
+
+.Header-text {
+  color: white;
+  margin-bottom: 75px;
+}
+
+.btm-text {
+  width: 77%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15%;
 }
