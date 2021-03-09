@@ -3,6 +3,7 @@ import fire from '../firebase';
 import Login from '../Pages/Login';
 import Home from '../Pages/Home';
 import '../Pages/Login.css';
+import { useHistory } from 'react-router-dom';
 
 const FirebaseAuth = () => {
   const [user,setUser] = useState('');
@@ -11,6 +12,9 @@ const FirebaseAuth = () => {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [hasAccount, setHasAccount] = useState(false);
+  const history = useHistory();
+
+
 
   const clearInputs = () => {
     setEmail('');
@@ -24,6 +28,8 @@ const FirebaseAuth = () => {
 
   const handleLogin = () => {
     clearErrors();
+
+     
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
@@ -40,7 +46,9 @@ const FirebaseAuth = () => {
           default:
             break;
         }
+
     });
+  
   };
 
   const handleSignup = () =>{
@@ -73,6 +81,7 @@ const FirebaseAuth = () => {
       if(user){
         clearInputs();
         setUser(user);
+        history.push("/");
 
       }else {
         setUser("");

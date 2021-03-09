@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "../components/Header";
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import fire from '../firebase';
 
@@ -21,6 +21,8 @@ const Login = (props) => {
         emailError,
         passwordError
     } = props;
+
+
 
 
     return(
@@ -45,8 +47,8 @@ const Login = (props) => {
                 <div className ="btnContainer">
                     {hasAccount ? (
                         <>
-                        <Link to = "/">
-                        <button onClick={handleLogin}> Log In </button> </Link>
+                       
+                        <button onClick={handleLogin}> Log In </button> 
                         <p className="btm-text-signIn"> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
                         <div className="forgot-link-container">
                             <Link className="forgot-link" to='/forgot-password' style={{textDecoration: 'none'}}>Forgot Password</Link>
