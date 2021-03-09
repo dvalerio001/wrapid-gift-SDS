@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "../components/Header";
 import { Link } from 'react-router-dom';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import fire from '../firebase';
 
 import './Login.css';
 import Home from './Home'
@@ -46,16 +47,17 @@ const Login = (props) => {
                         <>
                         <Link to = "/">
                         <button onClick={handleLogin}> Sign In </button> </Link>
-                        <link to='/forgot-password'>Forgot Password</link>
-                        <p> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
+                        <p className="btm-text-signIn"> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
+                        <div className="forgot-link-container">
+                            <Link className="forgot-link" to='/forgot-password' style={{textDecoration: 'none'}}>Forgot Password</Link>
+                        </div>
                         </>
 
                     ) : (
                         <>
                         <Link to = "/">
-                        <button className="btm-button" onClick={handleSignup}> Sign Up</button> </Link>
-                        
-                        <p className="btm-text"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign In</span></p>
+                        <button className="btm-button" onClick={fire.auth().createUserWithEmailAndPassword(email, password)}> Sign Up</button> </Link>
+                        <p className="btm-text-signUp"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign In</span></p>
                         </>
 
                     )}

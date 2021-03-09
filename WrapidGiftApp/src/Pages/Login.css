@@ -126,9 +126,24 @@ button {
   margin-bottom: 75px;
 }
 
-.btm-text {
+.btm-text-signUp {
   width: 77%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 15%;
+}
+
+.btm-text-signIn {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15%;
+}
+
+.forgot-link {
+  color: #e9e9e9;
+}
+
+.forgot-link-container {
+  margin-top: 7%;
 }
