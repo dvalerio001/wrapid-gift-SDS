@@ -91,8 +91,7 @@ button {
   font-size: 16px;
 }
 
-/*
-.hero {
+.home-container {
   width: 100%;
   min-height: 100vh;
   background: radial-gradient(
@@ -103,7 +102,7 @@ button {
   );
 }
 
-.hero nav {
+.home-container nav {
   background: #603bbb;
   width: 100%;
   padding: 20px 40px;
@@ -112,11 +111,11 @@ button {
   justify-content: space-between;
 }
 
-.hero nav h2 {
+.home-container nav h2 {
   color: #fff;
 }
 
-.hero nav button {
+.home-container nav button {
   width: 86px;
   padding: 8px 0;
   background: #3a2b58;
@@ -126,9 +125,7 @@ button {
   color: white;
   margin-bottom: 75px;
 }
-*/
-
-.btm-text-signUp {
+*/ .btm-text-signUp {
   width: 77%;
   margin-left: auto;
   margin-right: auto;

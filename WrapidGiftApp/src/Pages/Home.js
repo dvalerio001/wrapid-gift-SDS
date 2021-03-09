@@ -4,7 +4,7 @@ import Header from "../components/Header";
 const Home = () => {
 
     return(
-        <section className = "header">
+        <section className = "home-container">
             <nav>
               <Header />
             </nav>
