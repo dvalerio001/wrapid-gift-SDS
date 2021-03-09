@@ -1,7 +1,6 @@
 import React from 'react';
-import Header from "./Header";
+import Header from "../components/Header.js";
 import { Link, useHistory } from 'react-router-dom';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {useAuth} from 'react';
 
 
@@ -21,10 +20,10 @@ const ForgotPassword = (props) => {
 
 
     return(
-        <section className="login">
-            <div className = "loginContainer">
-            <h1 className="Header-text">Wrapid Gift</h1>
-                <label className="user-label">Email</label>
+        <section className="forgot-password-container">
+            <div className = "forgot-password-form">
+            <h1 className="forgot-password-header-text">Wrapid Gift</h1>
+                <label className="email-label">Email</label>
                 <input type = "text" autoFocus
                 required
                 value = {email}
@@ -32,7 +31,7 @@ const ForgotPassword = (props) => {
                 />
                 <p className = " errorMsg">{emailError}</p>
                 
-                <div className ="btnContainer">
+                <div className ="reset-password">
                     <button onClick={resetPassword}> Reset Password </button> 
                     <div>
                         <Link to ="/login">Login</Link>
