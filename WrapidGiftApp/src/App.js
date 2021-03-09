@@ -11,6 +11,7 @@ import {BrowserRouter as Router, Switch, Route} from
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Login from './Pages/Login'
+import ForgotPassword from './components/forgotPassword';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path="/about" exact component={About} />
       <FirebaseAuth>
       <Route path="/login" exact component={Login} />
+      <Route path="/forgot-password" exact component={ForgotPassword} />
       </FirebaseAuth>
     </Switch>
 

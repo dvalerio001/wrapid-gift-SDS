@@ -46,7 +46,7 @@ const Login = (props) => {
                     {hasAccount ? (
                         <>
                         <Link to = "/">
-                        <button onClick={handleLogin}> Sign In </button> </Link>
+                        <button onClick={handleLogin}> Log In </button> </Link>
                         <p className="btm-text-signIn"> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
                         <div className="forgot-link-container">
                             <Link className="forgot-link" to='/forgot-password' style={{textDecoration: 'none'}}>Forgot Password</Link>
@@ -56,8 +56,8 @@ const Login = (props) => {
                     ) : (
                         <>
                         <Link to = "/">
-                        <button className="btm-button" onClick={fire.auth().createUserWithEmailAndPassword(email, password)}> Sign Up</button> </Link>
-                        <p className="btm-text-signUp"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign In</span></p>
+                        <button className="btm-button" onClick={handleSignup}> Sign Up</button> </Link>
+                        <p className="btm-text-signUp"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Log In</span></p>
                         </>
 
                     )}
