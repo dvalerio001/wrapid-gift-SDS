@@ -38,6 +38,8 @@ const Header = () => {
   <NavItems>
     <NavbarLink to='/'>Home</NavbarLink>
     <NavbarLink to='/about'>About</NavbarLink>
+    <NavbarLink to='/contact'>Contact</NavbarLink>
+    <NavbarLink to='/forgot-password'>Forgot Pswd</NavbarLink>
     <NavbarLink to='/login'><button onClick={fire.auth().signOut()}>Logout</button></NavbarLink>
   </NavItems>
   </Navbar>

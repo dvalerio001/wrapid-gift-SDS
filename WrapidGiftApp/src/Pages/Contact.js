@@ -1,17 +1,17 @@
 import React from 'react';
 import Header from "../components/Header";
-import './Home.css';
+import './Contact.css';
 
-const Home = () => {
+const Contact = () => {
 
     return(
-        <section className = "home-container">
+        <section className = "Contact-container">
             <nav>
               <Header />
             </nav>
-            <h1>Home</h1>
+            <h1>Contact Us</h1>
         </section>
     );
 };
 
-export default Home;
+export default Contact;

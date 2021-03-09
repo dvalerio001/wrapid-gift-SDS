@@ -58,7 +58,9 @@ const Login = (props) => {
                     ) : (
                         <>
                         <button className="btm-button" onClick={handleSignup}> Sign Up</button> 
-                        <p className="btm-text-signUp"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Log In</span></p>
+                        <div className="btm-container-login">
+                            <p className="btm-text-signUp"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Log In</span></p>
+                        </div>
                         </>
 
                     )}

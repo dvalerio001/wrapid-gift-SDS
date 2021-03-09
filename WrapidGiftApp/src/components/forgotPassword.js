@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {useAuth} from 'react';
 
 
-import '../Pages/Login.css';
+import './ForgotPassword.css';
 
 const ForgotPassword = (props) => {
 
@@ -19,17 +19,12 @@ const ForgotPassword = (props) => {
 
     const {resetPassword} = useAuth();
 
-    
-
-
-
-
 
     return(
         <section className="login">
             <div className = "loginContainer">
             <h1 className="Header-text">Wrapid Gift</h1>
-                <label className="user-label">Username</label>
+                <label className="user-label">Email</label>
                 <input type = "text" autoFocus
                 required
                 value = {email}
