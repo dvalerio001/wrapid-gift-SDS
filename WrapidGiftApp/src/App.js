@@ -11,7 +11,7 @@ import {BrowserRouter as Router, Switch, Route} from
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Login from './Pages/Login'
-import ForgotPassword from './components/forgotPassword';
+import ForgotPassword from './components/ForgotPassword';
 
 function App() {
   return (

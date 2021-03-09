@@ -51,14 +51,13 @@ const Login = (props) => {
                         <button onClick={handleLogin}> Log In </button> 
                         <p className="btm-text-signIn"> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
                         <div className="forgot-link-container">
-                            <Link className="forgot-link" to='/forgot-password' style={{textDecoration: 'none'}}>Forgot Password</Link>
+                            <Link className="forgot-link" to="/forgot-password" style={{textDecoration: 'none'}}>Forgot Password?</Link>
                         </div>
                         </>
 
                     ) : (
                         <>
-                        <Link to = "/">
-                        <button className="btm-button" onClick={handleSignup}> Sign Up</button> </Link>
+                        <button className="btm-button" onClick={handleSignup}> Sign Up</button> 
                         <p className="btm-text-signUp"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Log In</span></p>
                         </>
 

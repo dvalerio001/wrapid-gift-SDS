@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import fire from '../firebase';
+import './Header.css'
 import FirebaseAuth from './FirebaseAuth'
 
 const Navbar = styled.nav`
@@ -31,13 +32,12 @@ const NavbarLink = styled(Link)`
 `;
 
 
-const Header = ({handleLogout}) => {
+const Header = () => {
   return <Navbar>
   <Logo to="/">Wrapid Gift</Logo>
   <NavItems>
     <NavbarLink to='/'>Home</NavbarLink>
     <NavbarLink to='/about'>About</NavbarLink>
-    <NavbarLink to='/login'>Login</NavbarLink>
     <NavbarLink to='/login'><button onClick={fire.auth().signOut()}>Logout</button></NavbarLink>
   </NavItems>
   </Navbar>

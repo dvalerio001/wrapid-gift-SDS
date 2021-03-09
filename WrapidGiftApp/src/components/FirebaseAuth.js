@@ -46,7 +46,6 @@ const FirebaseAuth = () => {
           default:
             break;
         }
-
     });
   
   };
@@ -89,6 +88,11 @@ const FirebaseAuth = () => {
     });
   };
 
+  const resetPassword = (email) => {
+
+    fire.auth().sendPasswordResetEmail(email);
+  };
+
   useEffect(() => {
     authListener();
 
@@ -115,6 +119,7 @@ return (
       setHasAccount = {setHasAccount}
       emailError = {emailError}
       passwordError = {passwordError}
+      resetPassword = {resetPassword}
       />
 
     )}
