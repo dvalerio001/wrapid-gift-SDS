@@ -1,8 +1,15 @@
 h1 {
-  color: #ffffff;
+  color: #fff;
   font-family: "Shippori Mincho", serif;
   text-align: center;
   margin-top: 5rem;
+}
+
+h2 {
+  margin-top: 30%;
+  color: #fff;
+  font-family: "Shippori Mincho", serif;
+  padding-bottom: 1.5rem;
 }
 
 img {
@@ -17,6 +24,13 @@ p {
   width: 30rem;
 }
 
+span {
+  font-family: "Shippori Mincho", serif;
+  font-size: 19px;
+  color: white;
+  margin-top: 5rem;
+  padding: 5rem;
+}
 .about-container {
   width: 100%;
   min-height: 100vh;
