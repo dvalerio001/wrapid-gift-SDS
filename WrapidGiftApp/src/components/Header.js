@@ -38,7 +38,7 @@ const Header = ({handleLogout}) => {
     <NavbarLink to='/'>Home</NavbarLink>
     <NavbarLink to='/about'>About</NavbarLink>
     <NavbarLink to='/login'>Login</NavbarLink>
-    <NavbarLink to='/'><button onClick={fire.auth().signOut()}>Logout</button></NavbarLink>
+    <NavbarLink to='/login'><button onClick={fire.auth().signOut()}>Logout</button></NavbarLink>
   </NavItems>
   </Navbar>
 };
