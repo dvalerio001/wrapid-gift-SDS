@@ -1,3 +1,9 @@
+#page-container {
+  position: relative;
+  height: 900px;
+
+}
+
 h1 {
   color: #fff;
   font-family: "Shippori Mincho", serif;
@@ -6,10 +12,18 @@ h1 {
 }
 
 h2 {
-  margin-top: 30%;
+  margin-top: 7%;
   color: #fff;
   font-family: "Shippori Mincho", serif;
   padding-bottom: 1.5rem;
+}
+
+#about-info {
+  color: #FFF;
+  width: 50%;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: 25%;
 }
 
 img {
@@ -18,25 +32,37 @@ img {
   margin-left: 0%;
 }
 
-#tyler {
+#tyler, #darnell, #liz {
+  font-family: "Shippori Mincho", serif;
   color: #FFF;
   margin-left: -10%;
   padding: .5rem;
+  font-size: 19px;
 }
-#tylerImg {
+#tylerImg, #darnellImg {
   width: 200px;
-  height: 270px;
+  height: 260px;
 }
 
-#darnellLiz {
-  width: 400px;
-  height: 250px;
+#lizImg {
+  width: 350px;
+  height: 260px;
+  padding-right: 5rem;
 }
 
 
-h3, h4 {
+footer {
+  bottom: 0;
+  background-color: #603BBB;
+  padding: 2rem;
+}
+
+#footer-content {
+  color: #FFF;
+}
+
+h3, h4, h5 {
   display: inline;
-  margin-top: 50;
 }
 
 span {

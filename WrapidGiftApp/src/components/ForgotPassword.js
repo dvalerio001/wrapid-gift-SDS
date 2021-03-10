@@ -1,9 +1,8 @@
 import React from 'react';
-import Header from "../components/Header.js";
+import Header from "./Header";
 import { Link, useHistory } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {useAuth} from 'react';
-
-
 import './ForgotPassword.css';
 
 const ForgotPassword = (props) => {
@@ -18,12 +17,11 @@ const ForgotPassword = (props) => {
 
     const {resetPassword} = useAuth();
 
-
     return(
-        <section className="forgot-password-container">
-            <div className = "forgot-password-form">
-            <h1 className="forgot-password-header-text">Wrapid Gift</h1>
-                <label className="email-label">Email</label>
+        <section className="login">
+            <div className = "loginContainer">
+            <h1 className="Header-text">Wrapid Gift</h1>
+                <label className="user-label">Email</label>
                 <input type = "text" autoFocus
                 required
                 value = {email}
@@ -31,23 +29,18 @@ const ForgotPassword = (props) => {
                 />
                 <p className = " errorMsg">{emailError}</p>
 
-                <div className ="reset-password">
+                <div className ="btnContainer">
                     <button onClick={resetPassword}> Reset Password </button>
                     <div>
                         <Link to ="/login">Login</Link>
                     </div>
                     <div>
                     <p className="btm-text-signIn"> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
     )
-
 };
 
 export default ForgotPassword;
