@@ -7,19 +7,8 @@ import {BrowserRouter as Router, Switch, Route} from
 
 import './ForgotPassword.css';
 
-const ForgotPassword = () => {
-    return(
-        <section className = "home-container">
-            <nav>
-              <Header />
-            </nav>
-            <h1>Forgot Password</h1>
-        </section>
-    );
-};
 
-
-/*const ForgotPassword = (props) => {
+const ForgotPassword = (props) => {
 
     const {
         email,
@@ -27,14 +16,14 @@ const ForgotPassword = () => {
         hasAccount,
         setHasAccount,
         emailError,
+        resetPassword
     } = props;
 
-    const {resetPassword} = useAuth();
 
 
     return(
-        <section className="forgot-password-container">
-            <div className = "forgot-password-form">
+        <section className="forgot-password">
+            <div className = "forgot-password-container">
             <h1 className="forgot-password-header-text">Wrapid Gift</h1>
                 <label className="forgot-password-email-label">Email</label>
                 <input type = "text" autoFocus
@@ -45,8 +34,8 @@ const ForgotPassword = () => {
                 <p className = " errorMsg">{emailError}</p>
                 
                 <div className ="reset-password">
-                    <button onClick={resetPassword}> Reset Password </button> 
                     <div>
+                        <button onClick={resetPassword}> Reset Password </button> 
                         <Link to ="/login">Login</Link>
                     </div>
 
@@ -63,5 +52,5 @@ const ForgotPassword = () => {
     )
 
 };
-*/
+
 export default ForgotPassword;
