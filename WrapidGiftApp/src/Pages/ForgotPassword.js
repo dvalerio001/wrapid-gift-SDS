@@ -2,11 +2,24 @@ import React from 'react';
 import Header from "../components/Header.js";
 import { Link, useHistory } from 'react-router-dom';
 import {useAuth} from 'react';
-
+import {BrowserRouter as Router, Switch, Route} from
+'react-router-dom'
 
 import './ForgotPassword.css';
 
-const ForgotPassword = (props) => {
+const ForgotPassword = () => {
+    return(
+        <section className = "home-container">
+            <nav>
+              <Header />
+            </nav>
+            <h1>Forgot Password</h1>
+        </section>
+    );
+};
+
+
+/*const ForgotPassword = (props) => {
 
     const {
         email,
@@ -23,7 +36,7 @@ const ForgotPassword = (props) => {
         <section className="forgot-password-container">
             <div className = "forgot-password-form">
             <h1 className="forgot-password-header-text">Wrapid Gift</h1>
-                <label className="email-label">Email</label>
+                <label className="forgot-password-email-label">Email</label>
                 <input type = "text" autoFocus
                 required
                 value = {email}
@@ -50,5 +63,5 @@ const ForgotPassword = (props) => {
     )
 
 };
-
+*/
 export default ForgotPassword;
