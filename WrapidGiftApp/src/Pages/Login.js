@@ -3,7 +3,6 @@ import Header from "../components/Header.js";
 import { Link, useHistory } from 'react-router-dom';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import fire from '../firebase';
-
 import './Login.css';
 import Home from './Home'
 
@@ -58,9 +57,7 @@ const Login = (props) => {
                     ) : (
                         <>
                         <button className="btm-button" onClick={handleSignup}> Sign Up</button> 
-                        <div className="btm-container-login">
-                            <p className="btm-text-signUp"> Have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Log In</span></p>
-                        </div>
+                        <p className="btm-text-signUp"> Have an account? <span className="btm-login-button" onClick ={() => setHasAccount(!hasAccount)}>Log In</span></p>
                         </>
 
                     )}

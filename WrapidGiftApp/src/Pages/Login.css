@@ -74,7 +74,7 @@ button {
 }
 
 .login .loginContainer .btnContainer p span {
-  color: yellow;
+  color: white;
   font-weight: 500;
   letter-spacing: 0.5px;
   margin-left: 5px;
@@ -96,10 +96,7 @@ button {
   margin-bottom: 75px;
 }
 .btm-text-signUp {
-  width: 77%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 15%;
+  padding-top: 50px;
 }
 
 .btm-text-signIn {
@@ -117,9 +114,10 @@ button {
   margin-top: 7%;
 }
 
-.btm-container-login {
-  display: flex;
-  justify-content: center;
-  padding-right: 24%;
-  padding-top: 12%;
+.login-option {
+  
+}
+
+.btm-login-button {
+
 }
