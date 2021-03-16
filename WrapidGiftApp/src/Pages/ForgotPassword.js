@@ -24,7 +24,7 @@ const ForgotPassword = (props) => {
     return(
         <section className="forgot-password">
             <div className = "forgot-password-container">
-            <h1 className="forgot-password-header-text">Wrapid Gift</h1>
+                <h1 className="forgot-password-header-text">Wrapid Gift</h1>
                 <label className="forgot-password-email-label">Email</label>
                 <input type = "text" autoFocus
                 required
@@ -36,7 +36,7 @@ const ForgotPassword = (props) => {
                 <div className ="reset-password">
                     <div>
                         <button onClick={resetPassword}> Reset Password </button> 
-                        <Link to ="/login">Login</Link>
+                        <Link className="forgot-password-login" style={{textDecoration: 'none'}} to ="/login">Login</Link>
                     </div>
 
                     <div>
