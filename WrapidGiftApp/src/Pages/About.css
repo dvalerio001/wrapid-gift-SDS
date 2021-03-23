@@ -19,9 +19,9 @@ img {
 }
 
 #tyler {
-  color: #FFF;
+  color: #fff;
   margin-left: -10%;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 #tylerImg {
   width: 200px;
@@ -33,8 +33,8 @@ img {
   height: 250px;
 }
 
-
-h3, h4 {
+h3,
+h4 {
   display: inline;
   margin-top: 50;
 }
