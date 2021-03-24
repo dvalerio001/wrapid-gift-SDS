@@ -6,12 +6,18 @@ import './AddFriend.css';
 const AddFriend = () => {
 
     return(
-        <section className = "addFriend-container">
-            <nav>
+        <div className="addFriend-container">
+        <div className="friend-form">
+          <nav>
               <Header />
-            </nav>
-            <button class="addButton">Add Friend</button>
-        </section>
+          </nav>
+          <form>
+              <h1>Enter a friend</h1>
+
+
+          </form>
+            </div>
+        </div>
     );
 };
 

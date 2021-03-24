@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "./components/Header";
 
+
 import FirebaseAuth from './components/FirebaseAuth'
 
 import './App.css';
@@ -22,11 +23,9 @@ function App() {
   return (
 
 
-
     <Router>
 
       <Switch>
-
         <Route path="/" exact component={Home} />
         <Route path="/addFriend" exact component={AddFriend} />
         <Route path="/about" exact component={About} />
