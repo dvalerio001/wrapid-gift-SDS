@@ -4,41 +4,55 @@
     "name": "product 1",
     "img" : "img/default-placeholder-image.png",
     "price" : 10.00,
+	"average_rating" : 3.90,
+	"average_rating_rounded" : 4.0
   },
   {
     "id" : 2,
     "name": "product 2",
     "img" : "img/default-placeholder-image.png",
     "price" : 10.00,
+  	"average_rating" : 3.0,
+  	"average_rating_rounded" : 3.0
   },
   {
     "id" : 3,
     "name": "product 3",
     "img" : "img/default-placeholder-image.png",
     "price" : 10.00,
+  	"average_rating" : 4.0,
+  	"average_rating_rounded" : 4.0
   },
   {
     "id" : 4,
     "name": "product 4",
     "img" : "img/default-placeholder-image.png",
     "price" : 8.00,
+  	"average_rating" : 2.1,
+  	"average_rating_rounded" : 2.0
   },
   {
     "id" : 5,
     "name": "product 5",
     "img" : "img/default-placeholder-image.png",
     "price" : 10.00,
+  	"average_rating" : 1.2,
+  	"average_rating_rounded" : 1.0
   },
   {
     "id" : 6,
     "name": "product 6",
     "img" : "img/default-placeholder-image.png",
     "price" : 10.00,
+  	"average_rating" : 3.9,
+  	"average_rating_rounded" : 4.0
   },
   {
     "id" : 7,
     "name": "product 7",
     "img" : "img/default-placeholder-image.png",
     "price" : 2.00,
+  	"average_rating" : 3.9,
+  	"average_rating_rounded" : 4.0
   }
 ]

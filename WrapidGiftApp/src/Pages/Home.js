@@ -13,19 +13,19 @@ const Home = () => {
     return(
 
       <ReactiveBase
-       app="good-books-ds"
-       credentials="nY6NNTZZ6:27b76b9f-18ea-456c-bc5e-3a5263ebc63d"
+       app="gift-finder"
+       credentials="ly4UvZLp6:5f75aa34-198a-430d-91a3-522608087a0a"
      >
 
       <nav class="home-container">
         <Header />
       </nav>
-    
+
      <DataSearch
         componentId="mainSearch"
-        dataField={["original_title", "original_title.search", "authors", "authors.search"]}
+        dataField={["name", "name.search", "price", "price.search"]}
         queryFormat="and"
-        placeholder="Search for a book title or an author"
+        placeholder="Search gifts"
         autosuggest={false}
         className="datasearch"
         innerClass={{
@@ -50,14 +50,16 @@ const Home = () => {
        />
        <ResultCard
          componentId="results"
-         dataField="original_title"
+         dataField="name"
          react={{
            "and": ["mainSearch", "ratingsFilter"]
          }}
          onData={(res)=>({
-           "image": res.image,
-           "title": res.original_title,
-           "description":  res.average_rating + " ★ "
+           "image": res.img,
+           "title": res.name,
+           "company": res.business,
+           "description":  res.average_rating + " ★ ",
+
          })}
        />
 
