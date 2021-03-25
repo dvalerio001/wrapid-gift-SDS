@@ -23,7 +23,7 @@ const Home = () => {
 
      <DataSearch
         componentId="mainSearch"
-        dataField={["name", "name.search", "price", "price.search"]}
+        dataField={["name", "name.search"]}
         queryFormat="and"
         placeholder="Search gifts"
         autosuggest={false}
@@ -48,11 +48,30 @@ const Home = () => {
            and: "mainSearch"
          }}
        />
+
+       <SingleRange
+       componentId = "ageFilter"
+       dataField ="age"
+       title= "Search by Age"
+       data={[
+        { start: 50, end: 100 , label: "50 years old & up" },
+        { start: 17, end: 100 , label: "17 years old & up" },
+        { start: 11, end: 16, label: "11 - 15 years old" },
+        { start: 6, end: 10, label: "6 - 10 years old" },
+        { start: 2, end: 5, label: "2 - 5 years old" },
+        { start: 0, end: 1, label: "0 - 1 year(s) old" },
+         
+       ]}
+        react={{
+        and: "mainSearch"
+      }}
+       
+       />
        <ResultCard
          componentId="results"
          dataField="name"
          react={{
-           "and": ["mainSearch", "ratingsFilter"]
+           "and": ["mainSearch", "ratingsFilter","ageFilter"]
          }}
          onData={(res)=>
            ({
