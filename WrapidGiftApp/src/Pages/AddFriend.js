@@ -10,8 +10,11 @@ const AddFriend = () => {
   const triggerText = 'Add a Friend';
   const onSubmit = (event) => {
     event.preventDefault(event);
-    console.log(event.target.name.value);
-    console.log(event.target.email.value);
+    alert(event.target.name.value);
+    console.log(event.target.gender.value);
+    console.log(event.target.birthday.value);
+    console.log(event.target.reminder.value);
+    console.log(event.target.reminderTime.value);
   };
   return (
     <div className="addFriend-container">
