@@ -54,13 +54,14 @@ const Home = () => {
          react={{
            "and": ["mainSearch", "ratingsFilter"]
          }}
-         onData={(res)=>({
+         onData={(res)=>
+           ({
            "image": res.img,
            "title": res.name,
            "company": res.business,
-           "description":  res.average_rating + " ★ ",
-
+           "description":  res.average_rating + " ★ "
          })}
+
        />
 
      </ReactiveBase>
