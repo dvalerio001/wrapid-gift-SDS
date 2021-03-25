@@ -1,21 +1,41 @@
 import React from 'react';
+import './form.css';
 
 export const Form = ({ onSubmit }) => {
   return (
     <form onSubmit={onSubmit}>
       <div className="form-group">
-        <label htmlFor="name">Name</label>
+        <label className="label" htmlFor="name">Name</label>
         <input className="form-control" id="name" />
       </div>
+
       <div className="form-group">
-        <label htmlFor="email">Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          placeholder="name@example.com"
-        />
+      <label className="label" for="gender">Gender</label>
+        <select className="form-control" id="Gender" name="Gender">
+          <option className="form-control" value="female">Female</option>
+          <option className="form-control" value="male">Male</option>
+          <option className="form-control" value="nonbinary" selected>Non-binary</option>
+          <option className="form-control" value="noAnswer">Do not wish to answer</option>
+        </select>
       </div>
+
+      <div className="form-group">
+        <label className="label" for="birthday">Birthday</label>
+        <input  className="form-control" type="date" id="birthday" name="birthday"/>
+      </div>
+
+
+
+      <div className="form-group">
+        <label className="label" for="reminder">Date of Reminder</label>
+        <input  className="form-control" type="date" id="birthday" name="birthday"/>
+      </div>
+
+      <div className="form-group">
+        <label className="label" for="reminder">Time of Reminder</label>
+        <input  className="form-control" type="time" id="birthday" name="birthday"/>
+      </div>
+
       <div className="form-group">
         <button className="form-control btn btn-primary" type="submit">
           Submit
