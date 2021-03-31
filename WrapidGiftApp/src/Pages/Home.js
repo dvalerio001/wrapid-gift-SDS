@@ -11,16 +11,13 @@ import './Home.css';
 const Home = () => {
 
     return(
-
       <ReactiveBase
        app="gift-finder"
        credentials="ly4UvZLp6:5f75aa34-198a-430d-91a3-522608087a0a"
      >
-
       <nav class="home-container">
         <Header />
       </nav>
-
      <DataSearch
         componentId="mainSearch"
         dataField={["name", "name.search", "price", "price.search"]}
@@ -33,7 +30,6 @@ const Home = () => {
           "list": "suggestionlist"
         }}
       />
-
       <SingleRange
          componentId="ratingsFilter"
          dataField="average_rating_rounded"

@@ -1,12 +1,14 @@
 import React from 'react';
 import './form.css';
+import AddFriend from '../Pages/AddFriend'
 
-export const Form = ({ onSubmit }) => {
+export const Form = ({ handleSubmit } ,{ displayHandler}, {showName}, state ) => {
+
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label className="label" htmlFor="name">Name</label>
-        <input className="form-control" id="name" />
+        <input className="form-control" id="name" onChange={displayHandler} value={state}  />
       </div>
 
       <div className="form-group">
@@ -37,9 +39,11 @@ export const Form = ({ onSubmit }) => {
       </div>
 
       <div className="form-group">
-        <button className="form-control btn btn-primary" type="submit">
+        <button className="form-control btn btn-primary" type="submit"  onClick={handleSubmit}>
           Submit
         </button>
+        {state.showName && <p>"FirstName: " {state}</p>}
+
       </div>
     </form>
   );
