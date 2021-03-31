@@ -30,7 +30,7 @@ const Home = () => {
           "list": "suggestionlist"
         }}
       />
-<<<<<<< HEAD
+
       <SingleRange
          componentId="ratingsFilter"
          dataField="average_rating_rounded"
@@ -58,13 +58,11 @@ const Home = () => {
            "company": res.business,
            "description":  res.average_rating + " ★ "
          })}
-=======
+         />
 
       <div className={"display"}>
           <div className={"leftSidebar"}>
->>>>>>> 596456daa290fb79a5edd417d1baf44f79a60046
-
-            <SingleRange
+          <SingleRange
               componentId="ratingsFilter"
               dataField="average_rating_rounded"
               title="Search Gifts"
@@ -90,15 +88,15 @@ const Home = () => {
                 { start: 6, end: 10, label: "6 - 10 years old" },
                 { start: 2, end: 5, label: "2 - 5 years old" },
                 { start: 0, end: 1, label: "0 - 1 year(s) old" },
-         
+
               ]}
                react={{
                 and: "mainSearch"
               }}
-       
+
               />
               </div>
-          
+
             <div className={"mainBar"}>
               <ResultCard
             componentId="results"
