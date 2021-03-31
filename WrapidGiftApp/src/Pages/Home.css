@@ -1,9 +1,25 @@
-.home-container {
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.home-container nav {
-  background: #603bbb;
+html,
+body {
+  height: 100%;
+}
+
+.home {
+  height: 100vh;
+}
+
+.home-page {
+  width: 100%;
+  margin: auto auto auto auto;
+}
+
+.nav {
+  background: #c49978;
   width: 100%;
   padding: 20px 40px;
   display: flex;
@@ -11,57 +27,43 @@
   justify-content: space-between;
 }
 
-.home-container nav h2 {
-  color: #fff;
-}
-
-.home-container nav button {
+.nav button {
   width: 86px;
   padding: 8px 0;
-  background: #3a2b58;
+  background: #553f30;
 }
 
-.datasearch {
-  margin-left: auto;
-  margin-right: auto;
+.home-hero {
+  background-image: url("../img/hero-bg2.jpg");
+  background-size: 140%;
+  background-position-x: -220px;
+  background-repeat: no-repeat;
+  padding: 170px 50px 0px;
+  height: 87vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-.datasearch .searchbox {
-  min-width: 400px;
-  border-radius: 30px;
-  padding: 5px 16px 5px 30px;
+.hero-header {
+  margin: auto;
+  font-size: 30px;
+  padding-right: 17px;
 }
 
-.suggestionlist {
-  color: #424242;
-  width: 90%;
-  margin-left: 5%;
+.hero-subheader {
+  color: white;
 }
 
-.display {
-  display: flex;
-  margin-top: 60px;
+.hero-subheader button {
+  background: #553f30;
+  width: 150px;
+  margin: 15px;
+  border-radius: 50px;
+}
+.hero-subheader button:hover {
+  background: #c49978;
 }
 
-.leftSidebar {
-  width: 320px;
-  height: 100%;
-  padding: 15px 20px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  border-right: 1px solid #f0f0f0;
-}
-
-.mainBar {
-  width: calc(100% - 320px);
-  position: relative;
-  left: 320px;
-  padding: 0px 30px;
-  background-color: #fefefe;
-}
-
-.result-data .result-image {
-  background-size: cover;
-  max-height: 200px;
+.hero-header h1 {
+  color: white;
 }

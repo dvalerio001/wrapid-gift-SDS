@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from "../components/Header";
 import './Contact.css';
+import '../components/Header.css';
 import Phone from './phoneIcon.png'
 import Email from './email.png'
 import {database} from '../firebase'
