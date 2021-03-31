@@ -47,7 +47,7 @@ const Login = (props) => {
                     {hasAccount ? (
                         <>
                        
-                        <button onClick={handleLogin}> Log In </button> 
+                        <button className="btm-button" onClick={handleLogin}> Log In </button> 
                         <p className="btm-text-signIn"> Dont have an account? <span onClick ={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
                         <div className="forgot-link-container">
                             <Link className="forgot-link" to="/forgot-password" style={{textDecoration: 'none'}}>Forgot Password?</Link>
