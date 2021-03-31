@@ -16,6 +16,7 @@ import ForgotPassword from './Pages/ForgotPassword';
 import Contact from './Pages/Contact';
 import Search from './Pages/Search';
 import AddFriend from './Pages/AddFriend';
+import Main from './Pages/Main';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/contact" exact component={Contact} />
         <Route path="/forgot-password" exact component={ForgotPassword} />
         <Route path="/search" exact component = {Search}/>
+        <Route path="/main" exact component = {Main}/>
         <FirebaseAuth>
         <Route path="/login" exact component={Login} />
         </FirebaseAuth>

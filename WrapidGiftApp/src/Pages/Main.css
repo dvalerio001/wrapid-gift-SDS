@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+nav {
+  background: #c49978;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav button {
+  width: 86px;
+  padding: 8px 0;
+  background: #553f30;
+}
+
+.main-page {
+  padding: 0px 10px 5px 10px;
+}

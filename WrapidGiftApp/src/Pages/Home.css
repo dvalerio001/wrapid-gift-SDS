@@ -1,9 +1,25 @@
-.home-container {
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.home-container nav {
-  background: #603bbb;
+html,
+body {
+  height: 100%;
+}
+
+.home {
+  height: 100vh;
+}
+
+.home-page {
+  width: 100%;
+  margin: auto auto auto auto;
+}
+
+.nav {
+  background: #c49978;
   width: 100%;
   padding: 20px 40px;
   display: flex;
@@ -11,14 +27,41 @@
   justify-content: space-between;
 }
 
-.home-container nav h2 {
-  color: #fff;
-}
-
-.home-container nav button {
+.nav button {
   width: 86px;
   padding: 8px 0;
-  background: #3a2b58;
+  background: #553f30;
+}
+
+.home-hero {
+  background-image: url("../img/hero-bg2.jpg");
+  background-size: 140%;
+  background-position-x: -220px;
+  background-repeat: no-repeat;
+  padding: 100px 50px 200px;
+  height: 87vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.hero-header {
+  margin: auto;
+  font-size: 30px;
+  padding-right: 17px;
+}
+
+.hero-subheader {
+  color: white;
+}
+
+.hero-subheader button {
+  background: #553f30;
+  width: 150px;
+  margin: 15px;
+  border-radius: 50px;
+}
+.hero-subheader button:hover {
+  background: #c49978;
 }
 
 .datasearch {
