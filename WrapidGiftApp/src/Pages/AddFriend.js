@@ -16,7 +16,7 @@ class AddFriend extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-     
+
     this.state = {
       name: ''
     }
@@ -52,7 +52,7 @@ class AddFriend extends Component {
             Remove
           </button>
         </div>
-    </div> 
+    </div>
     )
   }
 
@@ -64,9 +64,13 @@ class AddFriend extends Component {
   render() {
 
     return(
-      <div className="container">
+      <div className="addFriend-container">
+      <nav>
+         <Header />
+     </nav>
         <h1>Add a Friend!</h1>
         <hr />
+
         <div>
           <h3>Add New Friend Form</h3>
           <form onSubmit={this.handleSubmit}>

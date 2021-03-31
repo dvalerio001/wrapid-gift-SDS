@@ -10,17 +10,17 @@ import AddFriend from './Pages/AddFriend';
 const store = configureStore();
 
 ReactDOM.render(
-  
 
-    
+
+
 
     <Provider store ={store}>
       <App />
-      <AddFriend />
       
+
     </Provider>, document.getElementById('root'));
 
-  
+
 
 
 // If you want to start measuring performance in your app, pass a function
