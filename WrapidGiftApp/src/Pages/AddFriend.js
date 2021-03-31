@@ -6,106 +6,93 @@ import "./bootstrap.min.css";
 
 
 import './AddFriend.css';
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import * as contactAction from '../actions/contactAction';
 
+class AddFriend extends Component {
 
-
-class AddFriend extends React.Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+     
     this.state = {
-      modal: false,
-      name: "",
-      modalInputName: "",
-      birthday: "",
-      modalInputBirthday: ""
-    };
+      name: ''
+    }
   }
 
-  handleChange(e) {
-    const target = e.target;
-    const name = target.name;
-    const birthday = target.birthday;
-    const value = target.value;
-    const value1 = target.value.birthday;
-
+  handleChange(e){
     this.setState({
-      [name]: value,
-      [birthday]: value1
-    });
+      name: e.target.value
+    })
   }
 
-  handleSubmit(e) {
-    this.setState({ name: this.state.modalInputName });
-    this.setState({ birthday: this.state.modalInputBirthday });
-    this.modalClose();
-  }
-
-  modalOpen() {
-    this.setState({ modal: true });
-  }
-
-  modalClose() {
+  handleSubmit(e){
+    e.preventDefault();
+    let contact = {
+      name: this.state.name
+    }
     this.setState({
-      modalInputName: "",
-      modalInputBirthday: "",
-      modal: false
+      name: ''
     });
+    this.props.createContact(contact);
+  }
+
+  listView(data, index){
+    return (
+      <div className="row">
+        <div className="col-md-10">
+          <li key={index} className="list-group-item clearfix">
+            {data.name}
+          </li>
+        </div>
+        <div className="col-md-2">
+          <button onClick={(e) => this.deleteContact(e, index)} className="btn btn-danger">
+            Remove
+          </button>
+        </div>
+    </div> 
+    )
+  }
+
+  deleteContact(e, index){
+    e.preventDefault();
+    this.props.deleteContact(index);
   }
 
   render() {
-    return (
-      <div className="addFriend-container">
-      <nav>
-          <Header />
-      </nav>
-        <h1>Name {this.state.name}</h1>
-        <h2 className="displayInput">Birthday {this.state.birthday}</h2>
-        <a className="modalBtn" href="javascript:;" onClick={e => this.modalOpen(e)}>Add Friend</a>
-        <Modal show={this.state.modal} handleClose={e => this.modalClose(e)}>
 
-          <div className="form-group">
-            <label className="label">Enter Name:</label>
-            <input
-              type="text"
-              value={this.state.modalInputName}
-              name="modalInputName"
-              onChange={e => this.handleChange(e)}
-              className="form-control"
-            />
-          </div>
-          <div className="form-group">
-            <label className="label">Birthday</label>
-            <input className="form-control"
-              id="birthday"
-              type="date"
-              value={this.state.modalInputBirthday}
-              name="birthday"
-              onChange={e => this.handleChange(e)}
-              className="form-control"
-              />
-          </div>
-          <div className="form-group">
-            <label className="label">Reminder</label>
-            <input className="form-control"
-              id="reminder"
-              type="date"
-              value={this.state.modalInputBirthday}
-              name="reminder"
-              onChange={e => this.handleChange(e)}
-              className="form-control"
-              />
-          </div>
-          <div className="form-group">
-            <button onClick={e => this.handleSubmit(e)} type="button">
-              Save
-            </button>
-          </div>
-        </Modal>
+    return(
+      <div className="container">
+        <h1>Add a Friend!</h1>
+        <hr />
+        <div>
+          <h3>Add New Friend Form</h3>
+          <form onSubmit={this.handleSubmit}>
+            <input type="text" onChange={this.handleChange} className="form-control" value={this.state.name}/><br />
+            <input type="submit" className="btn btn-success" value="ADD"/>
+          </form>
+          <hr />
+        { <ul className="list-group">
+          {this.props.contacts.map((contact, i) => this.listView(contact, i))}
+        </ul> }
+        </div>
       </div>
-    );
+    )
   }
 }
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    contacts: state.contacts
+  }
+};
 
-export default AddFriend;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createContact: contact => dispatch(contactAction.createContact(contact)),
+    deleteContact: index =>dispatch(contactAction.deleteContact(index))
+  }
+};
+export default connect(mapStateToProps, mapDispatchToProps)(AddFriend);
