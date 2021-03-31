@@ -20,7 +20,7 @@ const Home = () => {
       </nav>
      <DataSearch
         componentId="mainSearch"
-        dataField={["name", "name.search", "price", "price.search"]}
+        dataField={["name", "name.search"]}
         queryFormat="and"
         placeholder="Search gifts"
         autosuggest={false}
@@ -30,6 +30,7 @@ const Home = () => {
           "list": "suggestionlist"
         }}
       />
+<<<<<<< HEAD
       <SingleRange
          componentId="ratingsFilter"
          dataField="average_rating_rounded"
@@ -57,8 +58,65 @@ const Home = () => {
            "company": res.business,
            "description":  res.average_rating + " ★ "
          })}
+=======
 
-       />
+      <div className={"display"}>
+          <div className={"leftSidebar"}>
+>>>>>>> 596456daa290fb79a5edd417d1baf44f79a60046
+
+            <SingleRange
+              componentId="ratingsFilter"
+              dataField="average_rating_rounded"
+              title="Search Gifts"
+              data={[
+                { start: 4, end: 5, label: "★★★★ & up" },
+                { start: 3, end: 5, label: "★★★ & up" },
+                { start: 2, end: 5, label: "★★ & up" },
+                { start: 1, end: 5, label: "★ & up" },
+              ]}
+              react={{
+                and: "mainSearch"
+              }}
+            />
+
+            <SingleRange
+              componentId = "ageFilter"
+              dataField ="age"
+              title= "Search by Age"
+              data={[
+                { start: 50, end: 100 , label: "50 years old & up" },
+                { start: 17, end: 100 , label: "17 years old & up" },
+                { start: 11, end: 16, label: "11 - 15 years old" },
+                { start: 6, end: 10, label: "6 - 10 years old" },
+                { start: 2, end: 5, label: "2 - 5 years old" },
+                { start: 0, end: 1, label: "0 - 1 year(s) old" },
+         
+              ]}
+               react={{
+                and: "mainSearch"
+              }}
+       
+              />
+              </div>
+          
+            <div className={"mainBar"}>
+              <ResultCard
+            componentId="results"
+            dataField="name"
+            react={{
+              "and": ["mainSearch", "ratingsFilter","ageFilter"]
+            }}
+            onData={(res)=>
+              ({
+              "image": res.img,
+              "title": res.name,
+              "company": res.business,
+              "description":  res.average_rating + " ★ "
+            })}
+
+          />
+            </div>
+        </div>
 
      </ReactiveBase>
    )
