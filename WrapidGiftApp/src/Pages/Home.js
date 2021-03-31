@@ -31,35 +31,6 @@ const Home = () => {
         }}
       />
 
-      <SingleRange
-         componentId="ratingsFilter"
-         dataField="average_rating_rounded"
-         title="Search Gifts"
-         data={[
-           { start: 4, end: 5, label: "★★★★ & up" },
-           { start: 3, end: 5, label: "★★★ & up" },
-           { start: 2, end: 5, label: "★★ & up" },
-           { start: 1, end: 5, label: "★ & up" },
-         ]}
-         react={{
-           and: "mainSearch"
-         }}
-       />
-       <ResultCard
-         componentId="results"
-         dataField="name"
-         react={{
-           "and": ["mainSearch", "ratingsFilter"]
-         }}
-         onData={(res)=>
-           ({
-           "image": res.img,
-           "title": res.name,
-           "company": res.business,
-           "description":  res.average_rating + " ★ "
-         })}
-         />
-
       <div className={"display"}>
           <div className={"leftSidebar"}>
           <SingleRange
