@@ -10,6 +10,24 @@ h1 {
   color:black;
 }
 
+.modalBtn {
+  color: white;
+  padding: 10px;
+  background-color: darkcyan;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+.modalBtn:hover {
+  color: black;
+  padding: 10px;
+  background-color: darkcyan;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
 .addFriend-container nav {
   background: #603bbb;
   width: 100%;

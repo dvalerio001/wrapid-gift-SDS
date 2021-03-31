@@ -27,7 +27,7 @@ class AddFriend extends React.Component {
     const name = target.name;
     const birthday = target.birthday;
     const value = target.value;
-    const value1 = target.value;
+    const value1 = target.value.birthday;
 
     this.setState({
       [name]: value,
@@ -59,11 +59,9 @@ class AddFriend extends React.Component {
       <nav>
           <Header />
       </nav>
-        <h1>Hello!! {this.state.name}</h1>
-        <h2 className="displayInput">Birthday: {this.state.birthday}</h2>
-        <a href="javascript:;" onClick={e => this.modalOpen(e)}>
-          Open Modal
-        </a>
+        <h1>Name {this.state.name}</h1>
+        <h2 className="displayInput">Birthday {this.state.birthday}</h2>
+        <a className="modalBtn" href="javascript:;" onClick={e => this.modalOpen(e)}>Add Friend</a>
         <Modal show={this.state.modal} handleClose={e => this.modalClose(e)}>
 
           <div className="form-group">
@@ -79,6 +77,7 @@ class AddFriend extends React.Component {
           <div className="form-group">
             <label className="label">Birthday</label>
             <input className="form-control"
+              id="birthday"
               type="date"
               value={this.state.modalInputBirthday}
               name="birthday"
@@ -86,8 +85,17 @@ class AddFriend extends React.Component {
               className="form-control"
               />
           </div>
-
-
+          <div className="form-group">
+            <label className="label">Reminder</label>
+            <input className="form-control"
+              id="reminder"
+              type="date"
+              value={this.state.modalInputBirthday}
+              name="reminder"
+              onChange={e => this.handleChange(e)}
+              className="form-control"
+              />
+          </div>
           <div className="form-group">
             <button onClick={e => this.handleSubmit(e)} type="button">
               Save
@@ -99,8 +107,5 @@ class AddFriend extends React.Component {
   }
 }
 
-//export default AddFriend;
-//const rootElement = document.getElementById("root");
-//ReactDOM.render(<AddFriend />, rootElement);
 
 export default AddFriend;
