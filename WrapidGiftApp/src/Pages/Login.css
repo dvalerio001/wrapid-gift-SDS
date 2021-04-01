@@ -66,8 +66,8 @@ button {
 }
 
 .login .loginContainer .btnContainer p {
-  margin: 14px 0 0 0;
-  text-align: right;
+  margin: 14px 0 20px 0;
+  text-align: center;
   color: #fff;
 }
 
@@ -80,8 +80,8 @@ button {
   transition: all 400ms ease-in-out;
 }
 
-.login .loginContainer .btnContainer p span:hover {
-  color: red;
+.login .loginContainer .btnContainer .btm-login-button:hover {
+  color: rgb(23, 184, 23);
 }
 
 .login .loginContainer .errorMsg {
@@ -95,13 +95,12 @@ button {
 }
 .btm-text-signUp {
   padding-top: 50px;
+  text-align: center;
 }
 
 .btm-text-signIn {
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 15%;
+  margin: auto;
+  padding-top: 15px;
 }
 
 .forgot-link {
@@ -110,4 +109,24 @@ button {
 
 .forgot-link-container {
   margin-top: 7%;
+  margin-bottom: -47.5px;
+}
+
+.btm-login-button {
+  cursor: pointer;
+  color: white;
+  width: 20%;
+  margin: auto;
+  margin-bottom: -30px;
+}
+
+.btm-signUp-btn {
+  cursor: pointer;
+  color: white;
+  width: 20%;
+  margin: auto;
+}
+
+.btm-signUp-btn:hover {
+  color: rgb(45, 177, 45);
 }
