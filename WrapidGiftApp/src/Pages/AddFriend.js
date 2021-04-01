@@ -78,47 +78,37 @@ class AddFriend extends Component {
 
     return(
       <div className="addFriend-container">
-      <nav>
+        <nav>
          <Header />
-     </nav>
-        <div className="friend-header">
-          <h1>Add a Friend!</h1>
-          <hr />
-        </div>
-
+        </nav>
         <div className="new-friend-form">
-          <h3>Add New Friend Form</h3>
-          <form onSubmit={this.handleSubmit}>
+          <h3 className="new-friend-form">Add New Friend Form</h3>
+          <form className=".new-friend-form" onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <input type="text" onChange={e => this.setState({name: e.target.value })} className="form-control" placeholder="Enter name" value={this.state.name}/><br />
+              <label className="label">Name</label>
+              <input  type="text" onChange={e => this.setState({name: e.target.value })} className="form-control" placeholder="Enter name" value={this.state.name}/><br />
             </div>
-
             <div className="form-group">
+              <label className="label">Age</label>
               <input type="text" onChange={e => this.setState({age: e.target.value })} className="form-control"  placeholder="Enter age" value={this.state.age}/><br />
-
             </div>
-
             <div className="form-group">
+              <label className="label">Birthday</label>
               <input type="date" onChange={e => this.setState({birthday: e.target.value })} className="form-control"  placeholder="Enter Birthday" value={this.state.birthday}/><br />
               <input type="submit" className="btn btn-success" value="ADD"/>
             </div>
-
           </form>
-          <hr />
+
         { <ul className="list-group">
-
             {this.props.contacts.map((contact, i) => this.listView(contact, i))}
-
-
         </ul> }
         </div>
-
       </div>
     )
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     contacts: state.contacts
   }

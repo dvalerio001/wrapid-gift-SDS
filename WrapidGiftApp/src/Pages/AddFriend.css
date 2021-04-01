@@ -1,41 +1,46 @@
 .addFriend-container {
   width: 100%;
+  background-image:url("https://images.unsplash.com/photo-1579208575657-c595a05383b7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80");
+  height: 140vh;
 }
 
-h1 {
+.form-group {
   color: black;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 0;
 }
+.form-control{
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 1px;
+  width: 50%;
+  border: 1px solid #ccc;
+  margin: 5px;
+  margin-right:-20px;
+  font-size: 15px;
 
-.displayInput {
-  color: black;
+}
+.label{
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .new-friend-form {
+  position: relative;
+  left: 25%;
+  background-color: #b3695f;
+  color: #FFF;
+  padding-top: 2px;
   width: 50%;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-.friend-header {
-  padding-top: 15px;
-}
 
-.modalBtn {
-  color: white;
-  padding: 10px;
-  background-color: darkcyan;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.modalBtn:hover {
-  color: black;
-  padding: 10px;
-  background-color: darkcyan;
-  border-radius: 5px;
-  text-decoration: none;
-}
 
 .addFriend-container nav {
   background: #c49978;
@@ -63,55 +68,7 @@ h1 {
   margin-left: 45%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-}
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-.App {
-  width: 90%;
-  max-width: 700px;
-  margin: 2em auto;
-}
-p.lorem-text {
-  text-align: justify;
-}
-
-.modal-cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  transform: translateZ(0);
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-area {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 2.5em 1.5em 1.5em 1.5em;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
 
 @media screen and (min-width: 500px) {
   /* Center the Modal! */
@@ -123,61 +80,4 @@ p.lorem-text {
     max-width: 30em;
     max-height: calc(100% - 1em);
   }
-}
-
-._modal-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.5em;
-  line-height: 1;
-  background: #f6f6f7;
-  border: 0;
-  box-shadow: 0;
-  cursor: pointer;
-}
-
-._modal-close-icon {
-  width: 25px;
-  height: 25px;
-  fill: transparent;
-  stroke: black;
-  stroke-linecap: round;
-  stroke-width: 2;
-}
-
-.modal-body {
-  padding-top: 0.25em;
-}
-._hide-visual {
-  border: 0 !important;
-  clip: rect(0 0 0 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
-}
-
-.scroll-lock {
-  overflow: hidden;
-  margin-right: 17px;
-}
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-.modal {
-  background: rgba(0, 0, 0, 0.6);
-}
-.modal-container {
-  position: absolute;
-  width: 60%;
-  background: #ffffff;
-  left: 25%;
-  top: 30%;
-  padding: 20px;
 }
