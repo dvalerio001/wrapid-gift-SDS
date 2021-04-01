@@ -1,12 +1,12 @@
-.whole-contact{
+.whole-contact {
   background: #603bbb;
-  width: 100%;  
+  width: 100%;
 }
 
 nav {
   background: #c49978;
   width: 100%;
-
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,7 +91,7 @@ textarea:focus {
 }
 
 .form > button {
-  padding: 20px;
+  padding-top: 15px;
   border: none;
   background-color: #553f30;
   font-weight: 500;
