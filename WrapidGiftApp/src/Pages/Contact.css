@@ -4,7 +4,7 @@
 }
 
 nav {
-  background: #603bbb;
+  background: #c49978;
   width: 100%;
 
   display: flex;
@@ -19,7 +19,7 @@ nav h2 {
 nav button {
   width: 86px;
   padding: 8px 0;
-  background: #341f61;
+  background: #553f30;
 }
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 

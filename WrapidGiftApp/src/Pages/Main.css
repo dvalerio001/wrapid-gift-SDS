@@ -3,7 +3,7 @@
 }
 
 .home-container nav {
-  background: #603bbb;
+  background: #c49978;
   width: 100%;
   padding: 20px 40px;
   display: flex;
@@ -18,7 +18,7 @@
 .home-container nav button {
   width: 86px;
   padding: 8px 0;
-  background: #3a2b58;
+  background: #553f30;
 }
 
 .datasearch {
