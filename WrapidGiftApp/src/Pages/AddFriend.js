@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
 import "./bootstrap.min.css";
+import "./form.css";
 
 
 import './AddFriend.css';
@@ -14,30 +15,40 @@ class AddFriend extends Component {
 
   constructor(props){
     super(props);
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
-      name: ''
+      name: '',
+      age: '',
+      birthday: ''
     }
-  }
-
-  handleChange(e){
-    this.setState({
-      name: e.target.value
-    })
   }
 
   handleSubmit(e){
     e.preventDefault();
-    let contact = {
-      name: this.state.name
-    }
-    this.setState({
-      name: ''
-    });
-    this.props.createContact(contact);
+      let contact = {
+        name: this.state.name,
+        age: this.state.age,
+        birthday: this.state.birthday
+      }
+      this.setState({
+        name: '',
+        age: '',
+        birthday: ''
+      });
+      this.props.createContact(contact);
   }
+
+  handleChange(e){
+   this.setState({
+     name: e.target.value,
+     age: e.target.value,
+     birthday: e.target.value
+   })
+ }
+
 
   listView(data, index){
     return (
@@ -45,6 +56,8 @@ class AddFriend extends Component {
         <div className="col-md-10">
           <li key={index} className="list-group-item clearfix">
             {data.name}
+            {data.age}
+            {data.birthday}
           </li>
         </div>
         <div className="col-md-2">
@@ -74,8 +87,20 @@ class AddFriend extends Component {
         <div>
           <h3>Add New Friend Form</h3>
           <form onSubmit={this.handleSubmit}>
-            <input type="text" onChange={this.handleChange} className="form-control" value={this.state.name}/><br />
-            <input type="submit" className="btn btn-success" value="ADD"/>
+            <div className="form-group">
+              <input type="text" onChange={e => this.setState({name: e.target.value })} className="form-control" placeholder="Enter name" value={this.state.name}/><br />
+            </div>
+
+            <div className="form-group">
+              <input type="text" onChange={e => this.setState({age: e.target.value })} className="form-control"  placeholder="Enter age" value={this.state.age}/><br />
+
+            </div>
+
+            <div className="form-group">
+              <input type="date" onChange={e => this.setState({birthday: e.target.value })} className="form-control"  placeholder="Enter Birthday" value={this.state.birthday}/><br />
+              <input type="submit" className="btn btn-success" value="ADD"/>
+            </div>
+
           </form>
           <hr />
         { <ul className="list-group">
