@@ -81,10 +81,12 @@ class AddFriend extends Component {
       <nav>
          <Header />
      </nav>
-        <h1>Add a Friend!</h1>
-        <hr />
+        <div className="friend-header">
+          <h1>Add a Friend!</h1>
+          <hr />
+        </div>
 
-        <div>
+        <div className="new-friend-form">
           <h3>Add New Friend Form</h3>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">

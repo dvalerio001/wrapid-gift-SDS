@@ -91,7 +91,7 @@ textarea:focus {
 }
 
 .form > button {
-  padding: 20px;
+  padding-top: 15px;
   border: none;
   background-color: #553f30;
   font-weight: 500;
