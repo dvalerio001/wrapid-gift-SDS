@@ -54,11 +54,11 @@ class AddFriend extends Component {
     return (
       <div className="row">
         <div className="col-md-10">
-          <li key={index} className="list-group-item clearfix">
-            {data.name}
-            {data.age}
-            {data.birthday}
-          </li>
+          <span key={index} className="list-group-item clearfix">
+          {'Name: '}{data.name}<br/>
+          {'Age: '}{data.age}<br/>
+          {'Birthday: '}{data.birthday}
+          </span>
         </div>
         <div className="col-md-2">
           <button onClick={(e) => this.deleteContact(e, index)} className="btn btn-danger">
@@ -104,9 +104,13 @@ class AddFriend extends Component {
           </form>
           <hr />
         { <ul className="list-group">
-          {this.props.contacts.map((contact, i) => this.listView(contact, i))}
+
+            {this.props.contacts.map((contact, i) => this.listView(contact, i))}
+
+
         </ul> }
         </div>
+
       </div>
     )
   }

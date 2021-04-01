@@ -18,7 +18,7 @@ const Logo = styled(Link)`
   color: #FFF;
   padding-left: 1rem;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   font-style: italic;
 `;
