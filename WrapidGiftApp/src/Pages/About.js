@@ -13,16 +13,28 @@ const About = () => {
       <nav>
         <Header />
       </nav>
-      <h1>About</h1>
+      
+      <section className="about-body">
+        
+        <div className="about-top">
+          <div className="top-left">
+            <h2>What is WrapidGift?</h2>
+            <p>We know how much pressure comes with getting gifts for everyone, that is why we are here to help. 
+              At WrapidGift, we aim to make this experience as easy as possible for you! Whether it's for Uncle
+              Phil's 4th wedding, or baby Joseph's 1st birthday, we have you covered. 
+            </p>
+          </div>
 
-      <h2>Meet the Team</h2>
+          <div className="top-right">
+            <img source="./about-gift.png"></img>
+          </div>
+        </div>
 
-
-      <h3 id="tyler">Tyler Spagnolo </h3>
-        <img id="tylerImg" src={Tyler}/>
-
-      <h4>Elisabeth Ashley and Darnell Valerio  </h4>
-        <img id="darnellLiz" src={DarnellLiz}/>
+        <div className="about-btm">
+          <h2>Meet the Team!</h2>
+        </div>
+        
+      </section>
 
   </section>
   );

@@ -6,10 +6,8 @@ h1 {
 }
 
 h2 {
-  margin-top: 30%;
-  color: #fff;
+  color: black;
   font-family: "Shippori Mincho", serif;
-  padding-bottom: 1.5rem;
 }
 
 img {
@@ -33,19 +31,6 @@ img {
   height: 250px;
 }
 
-h3,
-h4 {
-  display: inline;
-  margin-top: 50;
-}
-
-span {
-  font-family: "Shippori Mincho", serif;
-  font-size: 19px;
-  color: #553f30;
-  margin-top: 5rem;
-  padding: 5rem;
-}
 .about-container {
   width: 100%;
   min-height: 100vh;
@@ -61,12 +46,33 @@ span {
   justify-content: space-between;
 }
 
-.about-container nav h2 {
-  color: #fff;
-}
-
 .about-container nav button {
   width: 86px;
   padding: 8px 0;
   background: #553f30;
+}
+
+.about-container > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-top {
+  background-color: bisque;
+  padding: 5% 20% 5% 20%;
+}
+
+.top-left > h2,
+p {
+  text-align: left;
+}
+
+.top-left {
+  max-width: 50%;
+}
+
+.about-btm {
+  background-color: rgb(121, 89, 49);
+  padding-bottom: 20%;
+  padding-top: 2%;
 }
