@@ -32,7 +32,7 @@ class Main extends Component{
       <Header />
     </nav>
 
-    {this.state.showResultCard ? (
+   (
     <div>
     <div>
        <DataSearch
@@ -87,7 +87,7 @@ class Main extends Component{
         <ReactiveList
           componentId="results"
           dataField="img"
-          onData={(res) => <div><a href={res.business}>URL</a><img src={res.img}></img>{res.name}{' Rating'}{res.average_rating}<button onClick={this.handleClick}></button></div>}
+          onData={(res) => <div><a href={res.business}><img src={res.img}></img></a>{res.name}{' Rating'}{res.average_rating}</div>}
           pagination
           URLParams
           react={{
@@ -95,7 +95,7 @@ class Main extends Component{
           }}
         />
         </div>
-        </div> ) : (<button onClick={this.handleClick}>back</button>)}
+        </div> }
       </ReactiveBase>
     );
   }
