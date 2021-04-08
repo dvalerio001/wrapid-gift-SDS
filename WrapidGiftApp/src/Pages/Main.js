@@ -1,40 +1,56 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Header from "../components/Header";
 import {
   ReactiveBase,
   DataSearch,
   SingleRange,
-  ResultCard
+  ResultCard,
+  ReactiveList
 } from '@appbaseio/reactivesearch';
 import './Main.css';
 
-const Main = () => {
+class Main extends Component{
 
-    return(
-      <ReactiveBase
-       app="gift-finder"
-       credentials="ly4UvZLp6:5f75aa34-198a-430d-91a3-522608087a0a"
-     >
-      <nav class="home-container">
-        <Header />
-      </nav>
-     <DataSearch
-        componentId="mainSearch"
-        dataField={["name", "name.search"]}
-        queryFormat="and"
-        placeholder="Search gifts"
-        autosuggest={false}
-        className="datasearch"
-        innerClass={{
-          "input": "searchbox",
-          "list": "suggestionlist"
-        }}
-      />
+  constructor(props) {
+       super(props);
+       this.state = {
+           showResultCard : true,
+       };
+   }
 
+  handleClick = () =>  {
+       this.state.showResultCard ?
+     this.setState({ showResultCard: false }) : this.setState({ showResultCard: true });
+  }
 
-      <div className={"display"}>
-          <div className={"leftSidebar"}>
-          <SingleRange
+  render() {
+    return (
+    <ReactiveBase
+     app="gift-finder"
+     credentials="ly4UvZLp6:5f75aa34-198a-430d-91a3-522608087a0a">
+    <nav class="home-container">
+      <Header />
+    </nav>
+
+    {this.state.showResultCard ? (
+    <div>
+    <div>
+       <DataSearch
+          componentId="mainSearch"
+          dataField={["name", "name.search"]}
+          queryFormat="and"
+          placeholder="Search gifts"
+          autosuggest={false}
+          className="datasearch"
+          innerClass={{
+            "input": "searchbox",
+            "list": "suggestionlist"
+          }}
+          />
+    </div>
+    <div className={"display"}>
+         <div className={"leftSidebar"}>
+      <SingleRange
               componentId="ratingsFilter"
               dataField="average_rating_rounded"
               title="Search Gifts"
@@ -47,50 +63,42 @@ const Main = () => {
               react={{
                 and: "mainSearch"
               }}
-            />
+        />
 
-            <SingleRange
-              componentId = "ageFilter"
-              dataField ="age"
-              title= "Search by Age"
-              data={[
-                { start: 50, end: 100 , label: "50 years old & up" },
-                { start: 17, end: 100 , label: "17 years old & up" },
-                { start: 11, end: 16, label: "11 - 15 years old" },
-                { start: 6, end: 10, label: "6 - 10 years old" },
-                { start: 2, end: 5, label: "2 - 5 years old" },
-                { start: 0, end: 1, label: "0 - 1 year(s) old" },
-
-              ]}
-               react={{
-                and: "mainSearch"
-              }}
-
-              />
-              </div>
-
-            <div className={"mainBar"}>
-              <ResultCard
-            componentId="results"
-            dataField="name"
-            react={{
-              "and": ["mainSearch", "ratingsFilter","ageFilter"]
+        <SingleRange
+            componentId = "ageFilter"
+            dataField ="age"
+            title= "Search by Age"
+            data={[
+              { start: 50, end: 100 , label: "50 years old & up" },
+              { start: 17, end: 100 , label: "17 years old & up" },
+              { start: 11, end: 16, label: "11 - 15 years old" },
+              { start: 6, end: 10, label: "6 - 10 years old" },
+              { start: 2, end: 5, label: "2 - 5 years old" },
+              { start: 0, end: 1, label: "0 - 1 year(s) old" },
+            ]}
+             react={{
+              and: "mainSearch"
             }}
-            onData={(res)=>
-              ({
-              "image": res.img,
-              "title": res.name,
-              "company": res.business,
-              "description":  res.average_rating + " ★ "
-            })}
-
-          />
-            </div>
+        />
         </div>
-
-     </ReactiveBase>
-   )
-
+        </div>
+        <div className="mainBar">
+        <ReactiveList
+          componentId="results"
+          dataField="img"
+          onData={(res) => <div><a href={res.business}>URL</a><img src={res.img}></img>{res.name}{' Rating'}{res.average_rating}<button onClick={this.handleClick}></button></div>}
+          pagination
+          URLParams
+          react={{
+            "and": ["mainSearch", "ratingsFilter","ageFilter"]
+          }}
+        />
+        </div>
+        </div> ) : (<button onClick={this.handleClick}>back</button>)}
+      </ReactiveBase>
+    );
+  }
 };
 
 export default Main;
