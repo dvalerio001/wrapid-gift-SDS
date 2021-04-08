@@ -26,7 +26,7 @@ const About = () => {
           </div>
 
           <div className="top-right">
-            <img source="./about-gift.png"></img>
+            <p>Picture</p>
           </div>
         </div>
 
