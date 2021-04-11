@@ -35,12 +35,18 @@ const About = () => {
           <div className="btm-bubbles">
             <div className="Bubble 1">
               <h6>Tyler</h6>
+              <hr color="white" />
+              <p>Hi there! I am a Junior studying Computer Science at the State University of Plattsburgh.</p>
             </div>
             <div className="Bubble 1">
               <h6>Darnell</h6>
+              <hr></hr>
+              <p>Hi there! I am a Senior studying Computer Science at the State University of Plattsburgh.</p>
             </div>
             <div className="Bubble 1">
               <h6>Elisabeth</h6>
+              <hr></hr>
+              <p>Hi there! I am a Senior studying Computer Science at the State University of Plattsburgh.</p>
             </div>
           </div>
         </div>
