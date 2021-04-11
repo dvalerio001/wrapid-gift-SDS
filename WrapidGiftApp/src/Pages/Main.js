@@ -32,7 +32,7 @@ class Main extends Component{
       <Header />
     </nav>
 
-   (
+   
     <div>
     <div>
        <DataSearch
@@ -95,7 +95,7 @@ class Main extends Component{
           }}
         />
         </div>
-        </div> }
+        </div> 
       </ReactiveBase>
     );
   }

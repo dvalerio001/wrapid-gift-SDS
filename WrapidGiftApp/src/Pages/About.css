@@ -74,6 +74,17 @@ p {
 }
 
 .about-btm {
-  padding-bottom: 20%;
-  padding-top: 2%;
+  padding-bottom: 3%;
+  padding-top: 4%;
+}
+
+.btm-bubbles {
+  display: flex;
+  justify-content: space-between;
+  padding: 8%;
+}
+
+.btm-bubbles > * {
+  background-color: rgba(158, 158, 158, 0.253);
+  border-radius: 4px;
 }

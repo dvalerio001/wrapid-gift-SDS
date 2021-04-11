@@ -32,6 +32,17 @@ const About = () => {
 
         <div className="about-btm">
           <h2>Meet the Team!</h2>
+          <div className="btm-bubbles">
+            <div className="Bubble 1">
+              <h6>Tyler</h6>
+            </div>
+            <div className="Bubble 1">
+              <h6>Darnell</h6>
+            </div>
+            <div className="Bubble 1">
+              <h6>Elisabeth</h6>
+            </div>
+          </div>
         </div>
         
       </section>
