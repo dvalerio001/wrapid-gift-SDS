@@ -72,8 +72,8 @@ class Main extends Component{
             data={[
               { start: 50, end: 100 , label: "50 years old & up" },
               { start: 17, end: 100 , label: "17 years old & up" },
-              { start: 11, end: 16, label: "11 - 15 years old" },
-              { start: 6, end: 10, label: "6 - 10 years old" },
+              { start: 12, end: 16, label: "12 - 16 years old" },
+              { start: 6, end: 11, label: "6 - 11 years old" },
               { start: 2, end: 5, label: "2 - 5 years old" },
               { start: 0, end: 1, label: "0 - 1 year(s) old" },
             ]}
@@ -87,7 +87,7 @@ class Main extends Component{
         <ReactiveList
           componentId="results"
           dataField="img"
-          onData={(res) => <div><a href={res.business}><img src={res.img}></img></a>{res.name}{' Rating'}{res.average_rating}</div>}
+          onData={(res) => <div><a href={res.business} target="_blank" rel="noopener noreferrer"><img src={res.img}></img></a>{res.name}{' Rating'}{res.average_rating}</div>}
           pagination
           URLParams
           react={{

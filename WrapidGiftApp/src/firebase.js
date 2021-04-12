@@ -4,6 +4,7 @@ import firebase from 'firebase';
 var firebaseConfig = {
     apiKey: "AIzaSyCORm5vskOyCLjZSpKYsDtGZcKPbJrmicc",
     authDomain: "wrapid-gift-1693c.firebaseapp.com",
+    databaseURL: "https://wrapid-gift-1693c-default-rtdb.firebaseio.com",
     projectId: "wrapid-gift-1693c",
     storageBucket: "wrapid-gift-1693c.appspot.com",
     messagingSenderId: "492289068346",
