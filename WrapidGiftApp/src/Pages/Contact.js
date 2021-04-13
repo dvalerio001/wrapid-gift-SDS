@@ -2,18 +2,22 @@ import React, { useState } from 'react';
 import Header from "../components/Header";
 import './Contact.css';
 import '../components/Header.css';
+import firebaseConfig from '../firebase'
 
-import fire from '../firebase';
 
 const Contact = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    
+    const db = firebaseConfig.firestore();  
 
     const handleSubmit = (e) => {
 
-        fire.collection("Messages").add({
+        e.preventDefault();
+
+        db.collection("Contacts").add({
             name: name,
             email: email,
             message: message,
