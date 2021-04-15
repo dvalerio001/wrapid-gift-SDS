@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import '../components/Header.css';
 
 import './About.css';
+import Gift from './about-gift.png'
 import Tyler from './tyler.jpg'
 import DarnellLiz from './liz_nelly.png'
 
@@ -24,10 +25,15 @@ const About = () => {
               Phil's 4th wedding, or baby Joseph's 1st birthday, we have you covered. 
             </p>
           </div>
-
           <div className="top-right">
-            <p>Picture</p>
+            <h2>How Are We Different?</h2>
+            <p>You'll notice there are no gender specific gifts in our system. It is important 
+              to us that our community gets what they want, without society telling them they shouldn't!
+              
+            </p>
           </div>
+
+          
         </div>
 
         <div className="about-btm">

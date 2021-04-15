@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+img {
+  width: auto;
+}
+
 h1 {
   color: #fff;
   font-family: "Shippori Mincho", serif;
@@ -81,20 +85,22 @@ img {
 
 .about-top {
   background-color: rgb(36, 99, 36);
-  padding: 5% 10%;
+  padding: 5% 5%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: white;
 }
 
 .top-left > h2,
+.top-right > h2,
 p {
   text-align: center;
   color: white;
 }
 
-.top-left {
-  max-width: 60%;
+.top-left,
+.top-right {
+  max-width: 40%;
 }
 
 .about-btm {
@@ -123,5 +129,5 @@ p {
 
 p {
   text-align: center;
-  line-height: 1.8rem;
+  line-height: 2rem;
 }
