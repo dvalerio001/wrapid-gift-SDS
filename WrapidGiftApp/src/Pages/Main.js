@@ -89,7 +89,7 @@ class Main extends Component{
               componentId="results"
               dataField="original_title"
               react={{
-                "and": ["mainSearch", "ratingsFilter"]
+                "and": ["mainSearch", "ratingsFilter", "ageFilter"]
               }}
               pagination={true}
               size={8}

@@ -1,5 +1,4 @@
 .whole-contact {
-  background: #603bbb;
   width: 100%;
 }
 
@@ -29,10 +28,6 @@ nav button {
   box-sizing: border-box;
 }
 
-.whole-contact {
-  background: white;
-}
-
 body,
 input,
 textarea,
@@ -42,21 +37,24 @@ button {
 
 .app {
   width: 400px;
-  margin: 0 auto;
-  height: 100vh;
+  margin: 2% auto;
+  height: 85vh;
 }
 
 /* Contact.js */
 .form {
-  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(36, 99, 36);
+  padding-bottom: 10%;
+  border-radius: 10px;
 }
 
 .form > h1 {
   margin-bottom: 30px;
-  color: #553f30;
+  color: white;
+  padding-top: 7%;
 }
 
 .form > input,
@@ -69,13 +67,13 @@ textarea {
   /* border: none; */
   background: #fff;
   font-size: 16px;
-  color: rgb(0, 0, 32);
+  color: rgb(0, 0, 0);
   outline: none;
 }
 
 .form > input:focus,
 textarea:focus {
-  border: 1px solid #553f30;
+  border: 1px solid #000000;
 }
 
 .form > textarea {
@@ -86,23 +84,24 @@ textarea:focus {
 
 .form > label {
   padding-bottom: 10px;
-  color: #553f30;
+  color: white;
   font-weight: bold;
 }
 
 .form > button {
   padding-top: 15px;
   border: none;
-  background-color: #553f30;
+  background-color: rgb(20, 71, 20);
   font-weight: 500;
   font-size: 20px;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  margin-top: 10px;
+  margin-top: 8%;
+  width: 35%;
 }
 
 .form > button:hover {
-  background-color: #92735f;
+  background-color: rgb(95, 167, 95);
 }
