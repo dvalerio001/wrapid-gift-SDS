@@ -32,7 +32,7 @@ class Main extends Component{
       <Header />
     </nav>
 
-   
+
     <div>
     <div>
        <DataSearch
@@ -84,18 +84,31 @@ class Main extends Component{
         </div>
         </div>
         <div className="mainBar">
-        <ReactiveList
-          componentId="results"
-          dataField="img"
-          onData={(res) => <div><a href={res.business} target="_blank" rel="noopener noreferrer"><img src={res.img}></img></a>{res.name}{' Rating'}{res.average_rating}</div>}
-          pagination
-          URLParams
-          react={{
-            "and": ["mainSearch", "ratingsFilter","ageFilter"]
-          }}
+
+        <ResultCard
+              componentId="results"
+              dataField="original_title"
+              react={{
+                "and": ["mainSearch", "ratingsFilter"]
+              }}
+              pagination={true}
+              size={8}
+              onData={(res)=>(
+                {
+                  "image": res.img,
+                  "title": res.name,
+                   "url":res.business,
+                   "description":  res.average_rating + " ★ "
+                }
+              )}
+              className="result-data"
+              innerClass={{
+                "image": "result-image",
+                "resultStats": "result-stats"
+              }}
         />
         </div>
-        </div> 
+        </div>
       </ReactiveBase>
     );
   }
