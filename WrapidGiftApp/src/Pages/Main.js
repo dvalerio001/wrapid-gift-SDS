@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import Header from "../components/Header";
+import ProductCard from '../components/ProductCard'
+
+
 import {
   ReactiveBase,
   DataSearch,
@@ -25,6 +28,7 @@ class Main extends Component{
 
   render() {
     return (
+    
     <ReactiveBase
      app="gift-finder"
      credentials="ly4UvZLp6:5f75aa34-198a-430d-91a3-522608087a0a">
@@ -92,13 +96,17 @@ class Main extends Component{
                 "and": ["mainSearch", "ratingsFilter", "ageFilter"]
               }}
               pagination={true}
+              paginationAt="bottom"
               size={8}
+              Loader="Loading..."
+              noResults="No results were found..."
               onData={(res)=>(
                 {
                   "image": res.img,
                   "title": res.name,
                    "url":res.business,
-                   "description":  res.average_rating + " ★ "
+                   "description":  res.average_rating + " ★ ",
+
                 }
               )}
               className="result-data"
@@ -106,12 +114,30 @@ class Main extends Component{
                 "image": "result-image",
                 "resultStats": "result-stats"
               }}
+
+              renderItem={res => (
+                <ProductCard 
+                 id={res.id}
+                 posterPath={res.img}
+                 originalTitle={res.original_title}
+                 voteAverage={res.average_rating}
+                />
+               )}
+              
+
+              
         />
+
         </div>
+        
         </div>
       </ReactiveBase>
+      
+      
     );
+    
   }
+  
 };
 
 export default Main;
