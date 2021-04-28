@@ -1,0 +1,124 @@
+.carousel {
+	 position: relative;
+	 width: 100%;
+	 height: 26vw;
+   margin-top:  2%;
+   margin-bottom: 115%;
+	 overflow: hidden;
+
+}
+ .carousel_slide {
+   margin-top: 10%;
+	 position: absolute;
+	 top: auto;
+	 left: auto;
+	 height: -800rem;
+	 width: 150rem;
+	 text-align: center;
+	 display: flex;
+	 align-items: center;
+}
+
+ .carousel_history ul {
+	 list-style: none;
+	 padding: 0;
+	 margin: 0;
+	 display: flex;
+	 justify-content: center;
+	 height: 3px;
+}
+ .carousel_history ul li {
+	 width: 100%;
+	 box-sizing: border-box;
+	 height: inherit;
+	 position: relative;
+}
+
+ .carousel_history ul li button {
+	 border: none;
+	 outline: none;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 background-color: rgba(255, 255, 255, 0.5);
+	 width: 100%;
+	 height: 100%;
+	 cursor: pointer;
+	 transition: background-color 300ms ease;
+}
+ .carousel_history ul li button.active {
+	 background-color: rgba(255, 255, 255, 0.95);
+}
+ .carousel_control {
+	 position: absolute;
+	 z-index: 2;
+   margin-top: 30%;
+	 height: 100px;
+	 display: block;
+	 background-color: rgba(0, 0, 0, 0.1);
+	 border: 0;
+	 padding: 0 5px;
+	 width: 10%;
+	 overflow: hidden;
+	 transition: background-color 300ms ease;
+	 cursor: pointer;
+}
+ .carousel_control span {
+	 display: inline-block;
+	 width: 2vw;
+	 height: 2vw;
+	 position: relative;
+	 box-sizing: border-box;
+	 opacity: 0.65;
+	 border-bottom: 3px solid white;
+	 border-left: 3px solid white;
+	 transition: opacity 300ms ease;
+}
+ .carousel_control:hover {
+	 background-color: rgba(0, 0, 0, 0.2);
+}
+ .carousel_control:hover span {
+	 opacity: 0.95;
+}
+ .carousel_control__prev {
+	 left: 0;
+	 padding-left: 12px;
+}
+ .carousel_control__prev span {
+	 transform: rotate(45deg);
+}
+ .carousel_control__next {
+	 right: 0;
+	 padding-right: 12px;
+}
+ .carousel_control__next span {
+	 transform: rotate(-135deg);
+}
+ .leave {
+	 transform: translateX(0);
+}
+ .enter-active.enter-next, .enter-active.enter-prev {
+	 transform: translateX(0);
+	 transition: transform 500ms linear;
+}
+ .enter-next {
+	 transform: translateX(100%);
+}
+ .enter-prev {
+	 transform: translateX(-100%);
+	 transition: transform 500ms linear;
+}
+ .leave-active-next {
+	 transform: translateX(-100%);
+	 transition: transform 500ms linear;
+}
+ .leave.leave-active-prev {
+	 transform: translateX(100%);
+	 transition: transform 500ms linear;
+}
+
+ .app {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}

@@ -99,6 +99,7 @@ class Main extends Component{
                   "title": res.name,
                    "url":res.business,
                    "description":  res.average_rating + " ★ "
+
                 }
               )}
               className="result-data"
@@ -106,7 +107,9 @@ class Main extends Component{
                 "image": "result-image",
                 "resultStats": "result-stats"
               }}
+
         />
+
         </div>
         </div>
       </ReactiveBase>

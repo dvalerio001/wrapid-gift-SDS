@@ -9,6 +9,7 @@ import {
 } from '@appbaseio/reactivesearch';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import Carousel from "./Carousel";
 
 const Home = () => {
 
@@ -17,9 +18,11 @@ const Home = () => {
 
         <div className="nav">
           <Header />
+
         </div>
 
         <div className="home-page">
+
 
           <div className="home-hero">
 
@@ -44,8 +47,12 @@ const Home = () => {
           </div>
 
       </div>
-
+      <div className="carousel">
+      <Carousel/>
+      </div>
       </section>
+
+
     )
 
 };
